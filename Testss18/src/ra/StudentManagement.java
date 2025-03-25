@@ -44,9 +44,12 @@ public class StudentManagement {
                         System.out.println("sv đã bị xóa!"+student);
                     }
                 case 4:
-                    System.out.println("Điểm trung bình sv: "+student.get(student.keySet().toArray()[0]).getAverage());
-
-                    break;
+                    double total = 0;
+                    for (Student e : student.values()) {
+                        total += e.getAverage();
+                    }
+                    double avg = total / student.size();
+                    System.out.println("điểm trung bình: " + avg);
                 case 5:
                     break;
                 case 6:
