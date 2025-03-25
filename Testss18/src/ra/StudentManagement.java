@@ -51,10 +51,10 @@ public class StudentManagement {
                     break;
                 case 6:
                     Student maxage = null;
-                    double maxSalary = 0;
+                    double max = 0;
                     for (Student s: student.values()) {
-                        if (s.getAge() > maxSalary) {
-                            maxSalary = s.getAge();
+                        if (s.getAge() > max) {
+                            max = s.getAge();
                             maxage = s;
                         }
                     }
